@@ -8,22 +8,107 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #ff5945, #2575fc);
     padding: 10px;
 }
 
 .todo-app {
     width: 100%;
     max-width: 500px;
-    background: #ffff;
+    background: #ffffff;
     margin:  100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 30px 30px;
     border-radius: 20px;
 }
 
 .todo-app h2{
-    color: #ff7e5f;
+    color: #ff5945;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    
+}
+
+.todo-app h2 img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius:  30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight:  14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    padding:  12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    line-height: 28px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 21px;
+    width:  21px;
+    border-radius:  50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position:  center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #555;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
 }
